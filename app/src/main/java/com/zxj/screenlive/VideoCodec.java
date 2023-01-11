@@ -85,7 +85,6 @@ public class VideoCodec extends Thread{
 
             //从输出队列获取到输出到数据
             int index = mediaCodec.dequeueOutputBuffer(bufferInfo, 10000);//超时时间：10微秒
-            Log.e("zxj","2222222=="+index);
             if (index >= 0) {
                 //成功取出的编码数据
                 ByteBuffer buffer = mediaCodec.getOutputBuffer(index);
